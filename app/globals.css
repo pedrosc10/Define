@@ -10,7 +10,84 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-nunito-sans);
   --font-serif: var(--font-lora);
+
+  --color-brand: #2f6d63;
+  --color-brand-hover: #285d55;
+  --color-ink: #18322d;
+  --color-ink-soft: #244740;
+  --color-muted: #576a66;
+  --color-muted-strong: #52625e;
+  --color-muted-soft: #5b6f6a;
+  --color-eyebrow: #5f7d76;
+  --color-surface: #fdfcf9;
+  --color-surface-alt: #fbfaf6;
+  --color-tint: #ecf4f1;
+  --color-line: #d9e5e0;
+  --color-line-strong: #c7d9d3;
+  --color-accent: #7ea79c;
+
+  --animate-marquee-left: marquee-left 25s linear infinite;
+  --animate-marquee-right: marquee-right 25s linear infinite;
 }
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% / 3)); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(calc(-100% / 3)); }
+  to   { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
+}
+
+/* ─── Gallery carousel ────────────────────────────────────────────────────── */
+
+@keyframes gallery-carousel {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.gallery-carousel-track {
+  display: flex;
+  gap: 12px;
+  will-change: transform;
+  animation-name: gallery-carousel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.gallery-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-carousel-img {
+  height: 280px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .gallery-carousel-img { height: 200px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-carousel-track {
+    animation: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
 
 * {
   box-sizing: border-box;
@@ -18,6 +95,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

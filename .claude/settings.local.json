@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --no-install tsc --noEmit)",
+      "Bash(npx --no-install next build)",
+      "Bash(wc -l app/page.tsx app/components/*.tsx)",
+      "Bash(grep -c \"\\\\[#\" app/page.tsx app/components/*.tsx)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(npm audit *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/next/package.json'\\).version\\)\")"
+    ]
+  }
+}
