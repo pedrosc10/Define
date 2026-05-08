@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
 
+const BASE_URL = "https://www.centrodefine.com";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://www.centrodefine.com",
+      url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+      changeFrequency: "weekly",
+      priority: 1.0,
     },
   ];
 }
