@@ -81,7 +81,7 @@ export default function RootLayout({
       lang="es"
       className={`${nunitoSans.variable} ${lora.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
         <Analytics />
         <SpeedInsights />

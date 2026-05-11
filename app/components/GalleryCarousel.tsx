@@ -4,20 +4,58 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const SECONDS_PER_PHOTO = 1;
+const DRAG_SENSITIVITY = 3;
 
 export function GalleryCarousel({ images }: { images: string[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // Touch drag state — refs avoid re-renders during gesture
   const isDragging = useRef(false);
   const dragStartX = useRef(0);
-  const dragStartTranslate = useRef(0);
+  const dragStartTime = useRef(0); // animation currentTime at drag start (ms)
 
-  function getTranslateX(el: HTMLElement): number {
-    return new DOMMatrix(getComputedStyle(el).transform).m41;
+  function getAnimation(track: HTMLDivElement): Animation | null {
+    return track.getAnimations()[0] ?? null;
   }
 
-  // Attach touchmove as non-passive so we can preventDefault (stops page scroll)
+  function pixelToTime(pixelX: number, halfWidth: number, totalDurationMs: number): number {
+    // Animation: time 0 → translateX(0), time totalDurationMs → translateX(-halfWidth)
+    // pixelX is negative (moving left), so progress = -pixelX / halfWidth
+    let normalized = (-pixelX) % halfWidth;
+    if (normalized < 0) normalized += halfWidth;
+    return (normalized / halfWidth) * totalDurationMs;
+  }
+
+  function freezeTrack(track: HTMLDivElement, clientX: number) {
+    isDragging.current = true;
+    dragStartX.current = clientX;
+    const anim = getAnimation(track);
+    if (!anim) return;
+    // Save current animation time before pausing
+    dragStartTime.current = (anim.currentTime as number) ?? 0;
+    anim.pause();
+  }
+
+  function moveTrack(track: HTMLDivElement, clientX: number) {
+    const anim = getAnimation(track);
+    if (!anim) return;
+
+    const delta = clientX - dragStartX.current;
+    const halfWidth = track.scrollWidth / 2;
+    const totalDurationMs = images.length * SECONDS_PER_PHOTO * 1000;
+
+    const timeDelta = -(delta / halfWidth) * totalDurationMs * DRAG_SENSITIVITY;
+    let newTime = (dragStartTime.current + timeDelta) % totalDurationMs;
+    if (newTime < 0) newTime += totalDurationMs;
+
+    anim.currentTime = newTime;
+  }
+
+  function resumeTrack(track: HTMLDivElement) {
+    isDragging.current = false;
+    getAnimation(track)?.play();
+  }
+
+  // Non-passive touchmove so we can preventDefault and block page scroll while swiping
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -25,56 +63,62 @@ export function GalleryCarousel({ images }: { images: string[] }) {
     function onTouchMove(e: TouchEvent) {
       if (!isDragging.current || !track) return;
       e.preventDefault();
-      const delta = e.touches[0].clientX - dragStartX.current;
-      track.style.transform = `translateX(${dragStartTranslate.current + delta}px)`;
+      moveTrack(track, e.touches[0].clientX);
     }
 
     track.addEventListener("touchmove", onTouchMove, { passive: false });
     return () => track.removeEventListener("touchmove", onTouchMove);
   }, []);
 
+  // Mouse drag — listeners on document so drag continues if cursor leaves the track
+  useEffect(() => {
+    function onMouseMove(e: MouseEvent) {
+      const track = trackRef.current;
+      if (!isDragging.current || !track) return;
+      moveTrack(track, e.clientX);
+    }
+
+    function onMouseUp() {
+      const track = trackRef.current;
+      if (!isDragging.current || !track) return;
+      resumeTrack(track);
+      track.style.cursor = "grab";
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+  }, []);
+
   if (images.length === 0) return null;
 
-  // Duplicate for seamless loop: animation moves -50% = exactly one full set width
   const looped = [...images, ...images];
   const duration = `${images.length * SECONDS_PER_PHOTO}s`;
 
   function handleTouchStart(e: React.TouchEvent) {
     const track = trackRef.current;
     if (!track) return;
-    isDragging.current = true;
-    dragStartX.current = e.touches[0].clientX;
-    dragStartTranslate.current = getTranslateX(track);
-    // Freeze animation at current position
-    track.style.animationPlayState = "paused";
-    track.style.transform = `translateX(${dragStartTranslate.current}px)`;
+    freezeTrack(track, e.touches[0].clientX);
   }
 
   function handleTouchEnd() {
-    if (!isDragging.current) return;
-    isDragging.current = false;
+    const track = trackRef.current;
+    if (!isDragging.current || !track) return;
+    resumeTrack(track);
+  }
+
+  function handleMouseDown(e: React.MouseEvent) {
     const track = trackRef.current;
     if (!track) return;
-
-    // Convert current px offset back to an animation-delay that resumes seamlessly
-    const currentX = getTranslateX(track);
-    const halfWidth = track.scrollWidth / 2;
-    const totalDurationMs = images.length * SECONDS_PER_PHOTO * 1000;
-
-    // Normalize offset to [-halfWidth, 0]
-    let normalized = currentX % halfWidth;
-    if (normalized > 0) normalized -= halfWidth;
-
-    const progress = Math.abs(normalized) / halfWidth;
-    const delay = -(progress * totalDurationMs);
-
-    track.style.transform = "";
-    track.style.animationDelay = `${delay}ms`;
-    track.style.animationPlayState = "running";
+    e.preventDefault();
+    freezeTrack(track, e.clientX);
+    track.style.cursor = "grabbing";
   }
 
   return (
-    // Wrapper: full viewport width, fade edges, clip overflow
     <div
       className="mt-8 overflow-hidden"
       style={{
@@ -87,9 +131,10 @@ export function GalleryCarousel({ images }: { images: string[] }) {
       <div
         ref={trackRef}
         className="gallery-carousel-track"
-        style={{ animationDuration: duration }}
+        style={{ animationDuration: duration, cursor: "grab" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
       >
         {looped.map((src, i) => (
           <Image
