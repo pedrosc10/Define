@@ -20,12 +20,19 @@ const CHANNEL_COPY: Record<Channel, { title: string; hint: string }> = {
   },
 };
 
+/** `plain` no aporta estilos: el aspecto lo pone entero quien lo usa. */
+const VARIANT_CLASS = {
+  primary: primaryButtonClass,
+  secondary: secondaryButtonClass,
+  plain: "",
+} as const;
+
 type SedeCtaProps = {
   channel: Channel;
   origin: CtaOrigin;
   children: React.ReactNode;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: keyof typeof VARIANT_CLASS;
 };
 
 /**
@@ -68,8 +75,9 @@ export function SedeCta({ channel, origin, children, className = "", variant = "
     <>
       <button
         type="button"
+        aria-haspopup="dialog"
         onClick={() => setIsOpen(true)}
-        className={`${variant === "primary" ? primaryButtonClass : secondaryButtonClass} ${className}`}
+        className={`${VARIANT_CLASS[variant]} ${className}`.trim()}
       >
         {children}
       </button>
