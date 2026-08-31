@@ -59,6 +59,55 @@
   background: rgba(24, 50, 45, 0.94);
 }
 
+/* ─── Selector de sede ────────────────────────────────────────────────────── */
+
+/* El <dialog> ocupa toda la ventana y hace de fondo; el panel se ancla abajo en
+   móvil (hoja inferior, al alcance del pulgar) y se centra en escritorio. */
+.selector-sede {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.selector-sede[open] {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(24, 50, 45, 0.55);
+}
+
+@media (min-width: 640px) {
+  .selector-sede[open] {
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+.selector-sede[open] > div {
+  animation: selector-sede-entrada 220ms ease-out;
+}
+
+/* En móvil el panel toca el borde inferior: deja hueco para la barra de
+   gestos del iPhone. */
+.selector-sede-panel {
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .selector-sede-panel {
+    padding-bottom: 1.75rem;
+  }
+}
+
+@keyframes selector-sede-entrada {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
 /* ─────────────────────────────────────────────────────────────────────────── */
 
 * {

@@ -1,4 +1,5 @@
-import { PrimaryButton, SecondaryButton } from "./ui";
+import { WhatsAppCta } from "./WhatsAppCta";
+import { SecondaryButton } from "./ui";
 
 export function StickyMobileBar() {
   return (
@@ -11,9 +12,9 @@ export function StickyMobileBar() {
         <SecondaryButton href="tel:+34622671219" origin="barra-movil" ariaLabel="Llamar por teléfono a DEFINE" className="flex-1">
           Llamar
         </SecondaryButton>
-        <PrimaryButton href="https://wa.me/34622671219" origin="barra-movil" ariaLabel="Escribir por WhatsApp a DEFINE" className="flex-1">
+        <WhatsAppCta origin="barra-movil" className="flex-1">
           WhatsApp
-        </PrimaryButton>
+        </WhatsAppCta>
       </div>
     </div>
   );

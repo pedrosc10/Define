@@ -1,4 +1,5 @@
-import { PrimaryButton, SecondaryButton } from "../ui";
+import { WhatsAppCta } from "../WhatsAppCta";
+import { SecondaryButton } from "../ui";
 
 export function Contact() {
   return (
@@ -18,14 +19,9 @@ export function Contact() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <PrimaryButton
-                href="https://wa.me/34622671219"
-                origin="contacto"
-                ariaLabel="Reservar primera consulta por WhatsApp"
-                className="w-full sm:w-auto"
-              >
+              <WhatsAppCta origin="contacto" className="w-full sm:w-auto">
                 Reserva tu primera consulta
-              </PrimaryButton>
+              </WhatsAppCta>
               <SecondaryButton
                 href="tel:+34622671219"
                 origin="contacto"
