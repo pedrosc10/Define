@@ -2,7 +2,9 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-white/70">
+    // pb-24 deja hueco para la StickyMobileBar fija; desaparece cuando la barra
+    // deja de mostrarse.
+    <footer className="border-t border-line bg-white/70 pb-24 md:pb-0">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 xl:grid-cols-3 lg:px-8">
         <div>
           <p className="font-serif text-2xl text-ink">DEFINE</p>

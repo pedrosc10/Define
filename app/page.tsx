@@ -30,41 +30,48 @@ const structuredData = {
 
 export default function Home() {
   return (
-    <main className="bg-white pb-24 text-ink-soft md:pb-0">
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       {/* 1 — Navegación */}
       <Header />
 
-      {/* 2 — Hero emocional */}
-      <Hero />
+      {/*
+       * Header, Footer y StickyMobileBar quedan FUERA de <main>: <header> solo
+       * expone el landmark "banner" y <footer> el landmark "contentinfo"
+       * cuando su ancestro más cercano es <body>.
+       */}
+      <main id="contenido" className="bg-white text-ink-soft">
+        {/* 2 — Hero emocional */}
+        <Hero />
 
-      {/* 3 — Franja de prueba social */}
-      <SocialProof />
+        {/* 3 — Franja de prueba social */}
+        <SocialProof />
 
-      {/* 4 — Servicios en tabs */}
-      <ServiceTabs />
+        {/* 4 — Servicios en tabs */}
+        <ServiceTabs />
 
-      {/* 5 — Cómo trabajamos */}
-      <Process />
+        {/* 5 — Cómo trabajamos */}
+        <Process />
 
-      {/* 6 — Galería de fotos */}
-      <PhotoGallery />
+        {/* 6 — Galería de fotos */}
+        <PhotoGallery />
 
-      {/* 8 — Cita destacada (sección oscura de marca) */}
-      <Quote />
+        {/* 7 — Cita destacada (sección oscura de marca) */}
+        <Quote />
 
-      {/* 8 — FAQ acordeón */}
-      <Faqs />
+        {/* 8 — FAQ acordeón */}
+        <Faqs />
 
-      {/* 9 — Nuestros centros */}
-      <Locations />
+        {/* 9 — Nuestros centros */}
+        <Locations />
 
-      {/* CTA final */}
-      <Contact />
+        {/* 10 — CTA final */}
+        <Contact />
+      </main>
 
       <Footer />
       <StickyMobileBar />
-    </main>
+    </>
   );
 }
