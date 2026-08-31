@@ -10,23 +10,7 @@ import { Process } from "./components/sections/Process";
 import { Quote } from "./components/sections/Quote";
 import { ServiceTabs } from "./components/sections/ServiceTabs";
 import { SocialProof } from "./components/sections/SocialProof";
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [{
-    "@type": "MedicalBusiness",
-    "@id": "https://www.centrodefine.com/#define",
-    name: "Centro Psicopedagógico y de Desarrollo Integral DEFINE",
-    url: "https://www.centrodefine.com",
-    email: "define@centrodefine.com",
-    telephone: "+34 622 67 12 19",
-    areaServed: ["Arahal", "Alcalá de Guadaíra"],
-    department: [
-      { "@type": "MedicalBusiness", name: "DEFINE Arahal", telephone: "+34 622 67 12 19", address: { "@type": "PostalAddress", streetAddress: "C/ Alondra, 38 - local B", addressLocality: "Arahal", addressCountry: "ES" } },
-      { "@type": "MedicalBusiness", name: "DEFINE Alcalá de Guadaíra", telephone: "+34 722 41 33 78", address: { "@type": "PostalAddress", streetAddress: "C/ Bailén, 46", addressLocality: "Alcalá de Guadaíra", addressCountry: "ES" } },
-    ],
-  }],
-};
+import { structuredData } from "./structured-data";
 
 export default function Home() {
   return (
