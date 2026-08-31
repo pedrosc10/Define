@@ -1,5 +1,4 @@
-import { WhatsAppCta } from "./WhatsAppCta";
-import { SecondaryButton } from "./ui";
+import { SedeCta } from "./SedeCta";
 
 export function StickyMobileBar() {
   return (
@@ -9,12 +8,12 @@ export function StickyMobileBar() {
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
       <div className="mx-auto flex max-w-6xl gap-3">
-        <SecondaryButton href="tel:+34622671219" origin="barra-movil" ariaLabel="Llamar por teléfono a DEFINE" className="flex-1">
+        <SedeCta channel="telefono" origin="barra-movil" variant="secondary" className="flex-1">
           Llamar
-        </SecondaryButton>
-        <WhatsAppCta origin="barra-movil" className="flex-1">
+        </SedeCta>
+        <SedeCta channel="whatsapp" origin="barra-movil" className="flex-1">
           WhatsApp
-        </WhatsAppCta>
+        </SedeCta>
       </div>
     </div>
   );

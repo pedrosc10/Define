@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { CtaLink } from "./CtaLink";
 import { MobileMenu } from "./MobileMenu";
-import { WhatsAppCta } from "./WhatsAppCta";
+import { SedeCta } from "./SedeCta";
 
 const navItems = [
   { href: "#servicios", label: "Servicios" },
@@ -74,9 +74,9 @@ export function Header() {
           </CtaLink>
 
           <div className="hidden md:flex">
-            <WhatsAppCta origin="cabecera" className="min-h-10 px-4 py-2 text-xs sm:text-sm">
+            <SedeCta channel="whatsapp" origin="cabecera" className="min-h-10 px-4 py-2 text-xs sm:text-sm">
               Reservar consulta
-            </WhatsAppCta>
+            </SedeCta>
           </div>
 
           <MobileMenu items={navItems} />

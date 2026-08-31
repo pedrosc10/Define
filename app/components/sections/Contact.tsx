@@ -1,5 +1,4 @@
-import { WhatsAppCta } from "../WhatsAppCta";
-import { SecondaryButton } from "../ui";
+import { SedeCta } from "../SedeCta";
 
 export function Contact() {
   return (
@@ -19,17 +18,12 @@ export function Contact() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <WhatsAppCta origin="contacto" className="w-full sm:w-auto">
+              <SedeCta channel="whatsapp" origin="contacto" className="w-full sm:w-auto">
                 Reserva tu primera consulta
-              </WhatsAppCta>
-              <SecondaryButton
-                href="tel:+34622671219"
-                origin="contacto"
-                ariaLabel="Llamar por teléfono a DEFINE"
-                className="w-full sm:w-auto"
-              >
+              </SedeCta>
+              <SedeCta channel="telefono" origin="contacto" variant="secondary" className="w-full sm:w-auto">
                 Llamar ahora
-              </SecondaryButton>
+              </SedeCta>
             </div>
           </div>
         </div>

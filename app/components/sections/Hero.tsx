@@ -1,5 +1,4 @@
-import { WhatsAppCta } from "../WhatsAppCta";
-import { SecondaryButton } from "../ui";
+import { SedeCta } from "../SedeCta";
 
 export function Hero() {
   return (
@@ -25,17 +24,12 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <WhatsAppCta origin="hero" className="w-full sm:w-auto">
+            <SedeCta channel="whatsapp" origin="hero" className="w-full sm:w-auto">
               Reserva tu primera consulta
-            </WhatsAppCta>
-            <SecondaryButton
-              href="tel:+34622671219"
-              origin="hero"
-              ariaLabel="Llamar por teléfono a DEFINE"
-              className="w-full sm:w-auto"
-            >
+            </SedeCta>
+            <SedeCta channel="telefono" origin="hero" variant="secondary" className="w-full sm:w-auto">
               Llamar ahora
-            </SecondaryButton>
+            </SedeCta>
           </div>
         </div>
       </div>

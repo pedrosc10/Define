@@ -207,12 +207,20 @@ Lo marco en verde porque es descripción objetiva de lo que ya está publicado, 
 | `perf: recomprime los originales de la galería y corrige una foto girada` | 4.1 |
 | (los textos alternativos y el renombrado de fotos entran con el commit de la galería) | 3.4 + 3.5 |
 
-**ESLint:** de 1 error + 4 warnings a **0 errores + 3 warnings**, los tres en `GalleryCarousel.tsx`, el carrusel antiguo que se conserva sin usar hasta que se valide el nuevo.
+**ESLint:** de 1 error + 4 warnings a **0 errores y 0 warnings**.
 
 ## ⏳ Pendiente de decisión
 
-1. **Borrar `app/components/GalleryCarousel.tsx`** una vez validado el carrusel nuevo. Es lo único que queda del anterior y no lo importa nadie.
-2. **`Psychotherapy.tsx` y `AdultSupport.tsx`**: contenido real del centro que no se publica en ninguna parte. Decidir si vuelve a la página o se archiva.
-3. **Variante del `title`**: se aplicó la opción A (`Centro DEFINE | Psicología y Logopedia · Arahal y Alcalá`). Abrevia «Alcalá de Guadaíra» por espacio; el nombre completo se conserva en OpenGraph, en el JSON-LD y en la página.
-4. **Consentimiento de imagen** de los menores y de los participantes adultos que aparecen en las fotos (§2.6 de la auditoría).
-5. Datos que no se inventan y siguen faltando en el JSON-LD: códigos postales, coordenadas, redes sociales y ficha de Google Business.
+Resueltos tras la auditoría:
+
+1. ~~Borrar `GalleryCarousel.tsx`~~ → borrado, carrusel nuevo validado en móvil.
+2. ~~`Psychotherapy.tsx` y `AdultSupport.tsx`~~ → borrados; el texto queda en el historial de git.
+3. ~~Consentimiento de imagen~~ → confirmado por escrito para todas las fotos publicadas.
+4. ~~Datos que faltaban en el JSON-LD~~ → añadidos códigos postales, coordenadas, fichas de Google Business y redes sociales.
+5. ~~Los CTAs llevaban todos a Arahal~~ → resuelto con el selector de sede (`SedeCta`), en los dos canales: WhatsApp y teléfono.
+
+Sigue abierto:
+
+- **Variante del `title`**: se aplicó la opción A (`Centro DEFINE | Psicología y Logopedia · Arahal y Alcalá`). Abrevia «Alcalá de Guadaíra» por espacio; el nombre completo se conserva en OpenGraph, en el JSON-LD y en la página. Decisión tomada, reversible en una línea.
+- **El teléfono de la cabecera** (`622 67 12 19`) sigue siendo el de Arahal. No lleva selector porque muestra el número a la vista, así que no engaña a nadie; si se prefiere, puede alternar según sede o retirarse.
+- Las recomendaciones fuera de alcance del final de este documento: testimonios, páginas por servicio y sede, formulario de contacto y textos legales.

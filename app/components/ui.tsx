@@ -1,5 +1,3 @@
-import { CtaLink, type CtaOrigin } from "./CtaLink";
-
 export function Card({ className = "", children }: { className?: string; children: React.ReactNode }) {
   return (
     <div className={`rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-[0_18px_50px_-28px_rgba(44,74,67,0.35)] backdrop-blur ${className}`}>
@@ -18,34 +16,10 @@ export function SectionHeading({ eyebrow, title, description }: { eyebrow: strin
   );
 }
 
-// Se exportan las clases para que el botón que abre el selector de sede sea
-// idéntico al resto de CTAs sin duplicar los estilos.
+// Aspecto de los botones de llamada a la acción. Vive aquí, y no dentro de
+// SedeCta, para que la identidad visual siga estando en un solo sitio.
 export const primaryButtonClass =
   "inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(47,109,99,0.8)] transition hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 
 export const secondaryButtonClass =
   "inline-flex min-h-12 items-center justify-center rounded-full border border-control bg-white/80 px-6 py-3 text-sm font-semibold text-ink-soft transition hover:border-control-hover hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
-
-type ButtonProps = {
-  href: string;
-  origin: CtaOrigin;
-  children: React.ReactNode;
-  className?: string;
-  ariaLabel?: string;
-};
-
-export function PrimaryButton({ href, origin, children, className = "", ariaLabel }: ButtonProps) {
-  return (
-    <CtaLink href={href} origin={origin} ariaLabel={ariaLabel} className={`${primaryButtonClass} ${className}`}>
-      {children}
-    </CtaLink>
-  );
-}
-
-export function SecondaryButton({ href, origin, children, className = "", ariaLabel }: ButtonProps) {
-  return (
-    <CtaLink href={href} origin={origin} ariaLabel={ariaLabel} className={`${secondaryButtonClass} ${className}`}>
-      {children}
-    </CtaLink>
-  );
-}

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { WhatsAppCta } from "./components/WhatsAppCta";
-import { SecondaryButton } from "./components/ui";
+import { SedeCta } from "./components/SedeCta";
 
 export const metadata: Metadata = {
   title: "Página no encontrada | Centro DEFINE",
@@ -34,17 +33,12 @@ export default function NotFound() {
       </p>
 
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
-        <WhatsAppCta origin="error-404" className="w-full sm:w-auto">
+        <SedeCta channel="whatsapp" origin="error-404" className="w-full sm:w-auto">
           Escríbenos por WhatsApp
-        </WhatsAppCta>
-        <SecondaryButton
-          href="tel:+34622671219"
-          origin="error-404"
-          ariaLabel="Llamar por teléfono a DEFINE"
-          className="w-full sm:w-auto"
-        >
+        </SedeCta>
+        <SedeCta channel="telefono" origin="error-404" variant="secondary" className="w-full sm:w-auto">
           Llamar ahora
-        </SecondaryButton>
+        </SedeCta>
       </div>
 
       <Link href="/" className="mt-8 text-sm font-semibold text-brand underline underline-offset-4 transition hover:text-brand-hover">
