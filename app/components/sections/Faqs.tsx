@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "¿Cuánto dura cada sesión?",
-    answer: "Las sesiones tienen una duración habitual de 45 a 60 minutos, aunque puede variar según el tipo de intervención y las necesidades de cada caso.",
+    answer: "Las sesiones tienen una duración habitual de 60 minutos, aunque puede variar según el tipo de intervención y las necesidades de cada caso.",
   },
   {
     question: "¿Cuánto tiempo hay que esperar para tener cita?",

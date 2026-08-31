@@ -2,7 +2,7 @@ import { Card, SectionHeading } from "../ui";
 
 const approaches = [
   { title: "Cognitivo-conductual", description: "Identificación y cambio de pensamientos y conductas que generan malestar." },
-  { title: "Terapia sistémica", description: "Comprensión de la persona dentro de su entorno familiar y relacional." },
+  { title: "Terapia familiar", description: "Comprensión de la persona dentro de su entorno familiar y relacional." },
   { title: "Terapia narrativa", description: "Reinterpretación de la historia personal para construir nuevos significados." },
   { title: "Aceptación y compromiso (ACT)", description: "Trabajo en valores personales y flexibilidad psicológica." },
   { title: "EMDR", description: "Procesamiento de experiencias traumáticas y recuerdos bloqueados." },

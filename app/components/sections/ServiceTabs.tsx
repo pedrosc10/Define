@@ -28,7 +28,7 @@ const tabs: Tab[] = [
     services: [
       {
         title: "Psicopedagogía",
-        description: "Dificultades de aprendizaje: TDAH, dislexia, discalculia, comprensión lectora. Adaptación escolar y dificultades sociales.",
+        description: "Dificultades de aprendizaje: TDAH, dislexia, discalculia, comprensión lectora. Adaptación escolar y habilidades sociales.",
         icon: "book",
       },
       {
@@ -60,6 +60,11 @@ const tabs: Tab[] = [
         title: "Evaluación y diagnóstico",
         description: "Valoraciones completas con informe detallado, orientación personalizada y recomendaciones para el entorno educativo y familiar.",
         icon: "clipboard",
+      },
+      {
+        title: "Psicología infantojuvenil",
+        description: "Intervención en trastornos del neurodesarrollo, problemas de conducta, regulación emocional y dificultades de autoestima.",
+        icon: "people",
       },
     ],
   },
@@ -94,17 +99,12 @@ const tabs: Tab[] = [
     label: "Familia",
     services: [
       {
-        title: "Psicología infantil y juvenil",
-        description: "Intervención en trastornos del neurodesarrollo, problemas de conducta, regulación emocional y dificultades de autoestima.",
-        icon: "people",
-      },
-      {
         title: "Orientación familiar",
         description: "Acompañamiento y asesoramiento a familias, con coordinación activa con los centros educativos y otros profesionales.",
         icon: "home",
       },
       {
-        title: "Terapia sistémica",
+        title: "Terapia familiar",
         description: "Comprensión de la persona dentro de su entorno familiar y relacional para mejorar la dinámica de convivencia.",
         icon: "connect",
       },

@@ -1,7 +1,7 @@
 import { Card, SectionHeading } from "../ui";
 
 const services = [
-  { title: "Psicopedagogía", points: ["Dificultades de aprendizaje: TDAH, dislexia, comprensión lectora, discapacidad intelectual, discalculia...", "Adaptación escolar y dificultades sociales"] },
+  { title: "Psicopedagogía", points: ["Dificultades de aprendizaje: TDAH, dislexia, comprensión lectora, discapacidad intelectual, discalculia...", "Adaptación escolar y habilidades sociales"] },
   { title: "Neuropsicología", points: ["Estimulación de las funciones cognitivas: memoria, lenguaje, atención, función ejecutiva, cognición social, percepción y praxias"] },
   { title: "Logopedia", points: ["Trastornos del lenguaje, habla y comunicación", "Deglución y terapia miofuncional", "Sistemas aumentativos y alternativos de comunicación (SAAC)"] },
   { title: "Psicología", points: ["Trastornos del neurodesarrollo y dificultades de aprendizaje", "Problemas de conducta y regulación emocional", "Problemas de autoestima y motivación"] },
