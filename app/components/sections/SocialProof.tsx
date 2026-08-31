@@ -11,9 +11,11 @@ export function SocialProof() {
       <div className="mx-auto max-w-6xl px-4 py-7 sm:px-6 lg:px-8">
         <dl className="grid grid-cols-2 gap-y-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-line">
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1 text-center md:px-8">
-              <dt className="text-2xl font-bold text-brand sm:text-3xl">{stat.value}</dt>
-              <dd className="text-sm text-muted">{stat.label}</dd>
+            /* dt = término (la etiqueta), dd = descripción (el valor). El orden
+               visual se invierte con flex-col-reverse. */
+            <div key={stat.label} className="flex flex-col-reverse items-center gap-1 text-center md:px-8">
+              <dt className="text-sm text-muted">{stat.label}</dt>
+              <dd className="text-2xl font-bold text-brand sm:text-3xl">{stat.value}</dd>
             </div>
           ))}
         </dl>

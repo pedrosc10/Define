@@ -18,7 +18,9 @@
   --color-muted: #576a66;
   --color-muted-strong: #52625e;
   --color-muted-soft: #5b6f6a;
-  --color-eyebrow: #5f7d76;
+  /* #5f7d76 se quedaba en 4.49:1 sobre blanco y 4.12:1 sobre el crema, por
+     debajo del mínimo AA de 4.5:1. Este tono da 5.82:1 y 5.34:1. */
+  --color-eyebrow: #4e6b64;
   --color-surface: #fdfcf9;
   --color-surface-alt: #fbfaf6;
   --color-tint: #ecf4f1;
@@ -77,9 +79,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Foco visible por defecto en todo lo enfocable (enlaces de cabecera, pie y
+   menú móvil incluidos). Los componentes con `focus-visible:outline-*` de
+   Tailwind siguen mandando sobre esta regla. */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Movimiento reducido: se anulan TODAS las animaciones y transiciones, no solo
+   las del carrusel (tarjetas de servicio, icono del acordeón, sombra del
+   header…). */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

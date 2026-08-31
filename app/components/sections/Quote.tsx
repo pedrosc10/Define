@@ -16,7 +16,7 @@ export function Quote() {
             Cada familia que llega a nosotros trae una historia que merece ser escuchada, entendida y acompañada. Eso es lo que hacemos todos los días.
           </blockquote>
 
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
             Equipo DEFINE
           </p>
         </div>
