@@ -84,8 +84,8 @@ export const galleryPhotos: GalleryPhoto[] = [
     alt: "Profesional de DEFINE con participantes del programa para personas adultas",
   },
   {
-    src: "/gallery/sala-de-terapia-centro-define.jpg",
-    alt: "Sala de terapia del centro DEFINE con sofá y zona de trabajo",
+    src: "/gallery/zona-de-descanso-centro-define.jpg",
+    alt: "Zona de descanso del centro DEFINE, con sofá y punto de café",
   },
   {
     src: "/gallery/taller-grupal-programa-de-adultos.jpg",
