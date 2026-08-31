@@ -1,3 +1,4 @@
+import { CtaLink } from "../CtaLink";
 import { SectionHeading } from "../ui";
 
 const locations = [
@@ -70,9 +71,9 @@ export function Locations() {
                 <LocationIcon path="M2 3.5A1.5 1.5 0 0 1 3.5 2h2.12a1.5 1.5 0 0 1 1.5 1.29l.46 2.88a1.5 1.5 0 0 1-.34 1.22l-.88.88a12 12 0 0 0 4.37 4.37l.88-.88a1.5 1.5 0 0 1 1.22-.34l2.88.46A1.5 1.5 0 0 1 18 13.38v2.12A1.5 1.5 0 0 1 16.5 17C8.5 17 3 11.5 3 3.5" />
                 <span>
                   <strong className="font-semibold text-ink-soft">Teléfono:</strong>{" "}
-                  <a href={loc.phoneHref} className="transition hover:text-brand" aria-label={`Llamar al centro DEFINE de ${loc.city}`}>
+                  <CtaLink href={loc.phoneHref} origin="centros" className="transition hover:text-brand" ariaLabel={`Llamar al centro DEFINE de ${loc.city}`}>
                     {loc.phone}
-                  </a>
+                  </CtaLink>
                 </span>
               </li>
               <li className="flex items-start gap-2.5 text-sm leading-6 text-muted">
@@ -84,34 +85,33 @@ export function Locations() {
             </ul>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
+              <CtaLink
                 href={loc.phoneHref}
-                aria-label={`Llamar al centro DEFINE de ${loc.city}`}
+                origin="centros"
+                ariaLabel={`Llamar al centro DEFINE de ${loc.city}`}
                 className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
               >
                 <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M1.33 2.33A1 1 0 0 1 2.25 1.33h1.42a1 1 0 0 1 1 .86l.3 1.92a1 1 0 0 1-.22.82l-.59.59a8 8 0 0 0 2.91 2.91l.59-.59a1 1 0 0 1 .82-.22l1.92.3a1 1 0 0 1 .86 1v1.42a1 1 0 0 1-1 1C4.33 11.33 1.33 8.33 1.33 4.33" />
                 </svg>
                 Llamar
-              </a>
-              <a
+              </CtaLink>
+              <CtaLink
                 href={loc.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`WhatsApp del centro DEFINE de ${loc.city}`}
+                origin="centros"
+                ariaLabel={`WhatsApp del centro DEFINE de ${loc.city}`}
                 className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
               >
                 WhatsApp
-              </a>
-              <a
+              </CtaLink>
+              <CtaLink
                 href={loc.mapHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Ver en Google Maps el centro DEFINE de ${loc.city}`}
+                origin="centros"
+                ariaLabel={`Ver en Google Maps el centro DEFINE de ${loc.city}`}
                 className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
               >
                 Ver en Google Maps
-              </a>
+              </CtaLink>
             </div>
           </div>
         ))}

@@ -1,3 +1,5 @@
+import { CtaLink, type CtaOrigin } from "./CtaLink";
+
 export function Card({ className = "", children }: { className?: string; children: React.ReactNode }) {
   return (
     <div className={`rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-[0_18px_50px_-28px_rgba(44,74,67,0.35)] backdrop-blur ${className}`}>
@@ -16,26 +18,36 @@ export function SectionHeading({ eyebrow, title, description }: { eyebrow: strin
   );
 }
 
-export function PrimaryButton({ href, children, className = "", ariaLabel }: { href: string; children: React.ReactNode; className?: string; ariaLabel?: string }) {
+type ButtonProps = {
+  href: string;
+  origin: CtaOrigin;
+  children: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
+};
+
+export function PrimaryButton({ href, origin, children, className = "", ariaLabel }: ButtonProps) {
   return (
-    <a
+    <CtaLink
       href={href}
-      aria-label={ariaLabel}
+      origin={origin}
+      ariaLabel={ariaLabel}
       className={`inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(47,109,99,0.8)] transition hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
     >
       {children}
-    </a>
+    </CtaLink>
   );
 }
 
-export function SecondaryButton({ href, children, className = "", ariaLabel }: { href: string; children: React.ReactNode; className?: string; ariaLabel?: string }) {
+export function SecondaryButton({ href, origin, children, className = "", ariaLabel }: ButtonProps) {
   return (
-    <a
+    <CtaLink
       href={href}
-      aria-label={ariaLabel}
+      origin={origin}
+      ariaLabel={ariaLabel}
       className={`inline-flex min-h-12 items-center justify-center rounded-full border border-[#b5c8c1] bg-white/80 px-6 py-3 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
     >
       {children}
-    </a>
+    </CtaLink>
   );
 }

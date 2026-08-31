@@ -8,10 +8,10 @@ export function StickyMobileBar() {
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
       <div className="mx-auto flex max-w-6xl gap-3">
-        <SecondaryButton href="tel:+34622671219" ariaLabel="Llamar por teléfono a DEFINE" className="flex-1">
+        <SecondaryButton href="tel:+34622671219" origin="barra-movil" ariaLabel="Llamar por teléfono a DEFINE" className="flex-1">
           Llamar
         </SecondaryButton>
-        <PrimaryButton href="https://wa.me/34622671219" ariaLabel="Escribir por WhatsApp a DEFINE" className="flex-1">
+        <PrimaryButton href="https://wa.me/34622671219" origin="barra-movil" ariaLabel="Escribir por WhatsApp a DEFINE" className="flex-1">
           WhatsApp
         </PrimaryButton>
       </div>

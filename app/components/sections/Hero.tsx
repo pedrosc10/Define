@@ -26,6 +26,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <PrimaryButton
               href="https://wa.me/34622671219"
+              origin="hero"
               ariaLabel="Reservar primera consulta por WhatsApp"
               className="w-full sm:w-auto"
             >
@@ -33,6 +34,7 @@ export function Hero() {
             </PrimaryButton>
             <SecondaryButton
               href="tel:+34622671219"
+              origin="hero"
               ariaLabel="Llamar por teléfono a DEFINE"
               className="w-full sm:w-auto"
             >

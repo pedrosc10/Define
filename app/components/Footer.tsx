@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { CtaLink } from "./CtaLink";
+
 export function Footer() {
   return (
     // pb-24 deja hueco para la StickyMobileBar fija; desaparece cuando la barra
@@ -16,21 +18,21 @@ export function Footer() {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-eyebrow">Contacto</p>
           <p className="mt-3 text-sm leading-7 text-muted">
             Teléfono Arahal:{" "}
-            <a className="hover:text-brand" href="tel:+34622671219" aria-label="Llamar al centro DEFINE de Arahal">
+            <CtaLink href="tel:+34622671219" origin="pie" className="hover:text-brand" ariaLabel="Llamar al centro DEFINE de Arahal">
               622 67 12 19
-            </a>
+            </CtaLink>
           </p>
           <p className="text-sm leading-7 text-muted">
             Teléfono Alcalá:{" "}
-            <a className="hover:text-brand" href="tel:+34722413378" aria-label="Llamar al centro DEFINE de Alcalá de Guadaíra">
+            <CtaLink href="tel:+34722413378" origin="pie" className="hover:text-brand" ariaLabel="Llamar al centro DEFINE de Alcalá de Guadaíra">
               722 41 33 78
-            </a>
+            </CtaLink>
           </p>
           <p className="text-sm leading-7 text-muted">
             Email:{" "}
-            <a className="hover:text-brand" href="mailto:define@centrodefine.com" aria-label="Enviar un correo a DEFINE">
+            <CtaLink href="mailto:define@centrodefine.com" origin="pie" className="hover:text-brand" ariaLabel="Enviar un correo a DEFINE">
               define@centrodefine.com
-            </a>
+            </CtaLink>
           </p>
         </div>
         <div className="flex flex-col">

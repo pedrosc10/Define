@@ -20,6 +20,7 @@ export function Contact() {
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <PrimaryButton
                 href="https://wa.me/34622671219"
+                origin="contacto"
                 ariaLabel="Reservar primera consulta por WhatsApp"
                 className="w-full sm:w-auto"
               >
@@ -27,6 +28,7 @@ export function Contact() {
               </PrimaryButton>
               <SecondaryButton
                 href="tel:+34622671219"
+                origin="contacto"
                 ariaLabel="Llamar por teléfono a DEFINE"
                 className="w-full sm:w-auto"
               >
