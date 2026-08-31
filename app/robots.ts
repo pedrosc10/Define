@@ -5,7 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/_next/"],
+      // No se bloquea /_next/: contiene el CSS, el JS y las imágenes
+      // optimizadas que Google necesita para renderizar e indexar la web.
+      disallow: ["/api/"],
     },
     sitemap: "https://www.centrodefine.com/sitemap.xml",
   };
