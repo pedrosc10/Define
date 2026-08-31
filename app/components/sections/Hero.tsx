@@ -20,7 +20,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#4f6560] sm:text-xl">
-            Centro Psicopedagógico de Psicología y Logopedia. Evaluación, diagnóstico e intervención personalizada para niños, adolescentes, adultos y familias.
+            Centro Psicopedagógico de Psicología y Logopedia en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada para niños, adolescentes, adultos y familias.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

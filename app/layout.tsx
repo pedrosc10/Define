@@ -16,11 +16,18 @@ const lora = Lora({
   display: "swap",
 });
 
+// El title y la description de búsqueda se mantienen dentro de lo que Google
+// llega a mostrar (~60 y ~155 caracteres). Los de OpenGraph no tienen ese
+// límite, así que conservan el nombre completo y el listado íntegro.
+const SOCIAL_TITLE =
+  "Centro Psicopedagógico y de Desarrollo Integral DEFINE | Arahal y Alcalá de Guadaíra";
+const SOCIAL_DESCRIPTION =
+  "Psicopedagogía, psicología, logopedia, neuropsicología, atención temprana y apoyo a adultos con diversidad funcional en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada.";
+
 export const metadata: Metadata = {
-  title:
-    "Centro Psicopedagógico y de Desarrollo Integral DEFINE | Arahal y Alcalá de Guadaíra",
+  title: "Centro DEFINE | Psicología y Logopedia · Arahal y Alcalá",
   description:
-    "Psicopedagogía, psicología, logopedia, neuropsicología, atención temprana y apoyo a adultos con diversidad funcional en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada.",
+    "Psicopedagogía, psicología, logopedia y neuropsicología en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención para niños y adultos.",
   keywords: [
     "centro psicopedagógico Arahal",
     "centro psicopedagógico Alcalá de Guadaíra",
@@ -44,30 +51,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title:
-      "Centro Psicopedagógico y de Desarrollo Integral DEFINE | Arahal y Alcalá de Guadaíra",
-    description:
-      "Psicopedagogía, psicología, logopedia, neuropsicología, atención temprana y apoyo a adultos con diversidad funcional en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada.",
+    title: SOCIAL_TITLE,
+    description: SOCIAL_DESCRIPTION,
     locale: "es_ES",
     type: "website",
     url: "https://www.centrodefine.com",
     siteName: "DEFINE Centro Psicopedagógico",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1718,
-        height: 361,
-        alt: "DEFINE — Centro Psicopedagógico y de Desarrollo Integral",
-      },
-    ],
+    // La imagen la genera app/opengraph-image.tsx (1200 × 630).
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Centro Psicopedagógico y de Desarrollo Integral DEFINE | Arahal y Alcalá de Guadaíra",
-    description:
-      "Psicopedagogía, psicología, logopedia, neuropsicología, atención temprana y apoyo a adultos con diversidad funcional en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada.",
-    images: ["/logo.png"],
+    title: SOCIAL_TITLE,
+    description: SOCIAL_DESCRIPTION,
   },
 };
 

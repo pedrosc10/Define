@@ -20,7 +20,7 @@ export function Process() {
     <section id="como-trabajamos" className="mx-auto max-w-6xl scroll-mt-28 px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <SectionHeading
         eyebrow="Cómo trabajamos"
-        title="Un proceso claro desde el primer contacto"
+        title="Un proceso claro desde la primera consulta"
         description="Queremos que sepáis qué esperar en cada fase y que os sintáis acompañados desde el inicio."
       />
 

@@ -63,7 +63,7 @@ export function Faqs() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Preguntas frecuentes"
-          title="Información útil antes de empezar"
+          title="Información útil antes de vuestra primera cita"
           description="Respondemos las dudas más habituales para que el primer contacto sea claro y sencillo."
         />
         <div className="mt-10 space-y-3">

@@ -24,7 +24,7 @@ export function Locations() {
     <section id="centros" className="mx-auto max-w-6xl scroll-mt-28 px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <SectionHeading
         eyebrow="Nuestros centros"
-        title="Dos centros para acompañarte más cerca"
+        title="Dos centros en Arahal y Alcalá de Guadaíra"
         description="Atendemos en Arahal y Alcalá de Guadaíra en espacios adaptados, accesibles y diseñados para favorecer el bienestar."
       />
 

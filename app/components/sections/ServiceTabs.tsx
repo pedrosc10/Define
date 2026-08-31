@@ -126,7 +126,7 @@ export function ServiceTabs() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Especialidades"
-          title="Áreas de apoyo psicológico y educativo"
+          title="Áreas de apoyo psicológico, educativo y del lenguaje"
           description="Intervenimos desde distintas especialidades para ofrecer una respuesta completa, clara y coordinada."
         />
 
