@@ -14,7 +14,7 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
         aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line-strong bg-white text-ink-soft md:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line-strong bg-white text-ink-soft lg:hidden"
       >
         <span className="sr-only">Menú</span>
         <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
@@ -28,7 +28,7 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
         </svg>
       </button>
       {isOpen ? (
-        <div className="absolute inset-x-0 top-full border-t border-line bg-surface-alt md:hidden">
+        <div className="absolute inset-x-0 top-full border-t border-line bg-surface-alt lg:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-4 py-3 sm:px-6">
             {items.map((item) => (
               <a
