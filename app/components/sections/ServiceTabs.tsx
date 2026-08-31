@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Card, SectionHeading } from "../ui";
 
@@ -214,6 +214,24 @@ function ServiceIcon({ icon }: { icon: IconKey }) {
 export function ServiceTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
   const current = tabs.find((t) => t.id === activeTab) ?? tabs[0];
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  // Navegación con flechas dentro del tablist, según el patrón ARIA de tabs.
+  function handleTabKeyDown(event: React.KeyboardEvent, index: number) {
+    const lastIndex = tabs.length - 1;
+    let nextIndex: number | null = null;
+
+    if (event.key === "ArrowRight") nextIndex = index === lastIndex ? 0 : index + 1;
+    else if (event.key === "ArrowLeft") nextIndex = index === 0 ? lastIndex : index - 1;
+    else if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = lastIndex;
+
+    if (nextIndex === null) return;
+    event.preventDefault();
+    const nextTab = tabs[nextIndex];
+    setActiveTab(nextTab.id);
+    tabRefs.current[nextTab.id]?.focus();
+  }
 
   return (
     <section id="servicios" className="scroll-mt-28 bg-[#F7F5F0] py-20 sm:py-24">
@@ -225,29 +243,45 @@ export function ServiceTabs() {
         />
 
         <div className="mt-10 flex flex-col items-center gap-2 sm:flex-row sm:justify-center" role="tablist" aria-label="Grupos de servicio">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              role="tab"
-              aria-selected={activeTab === tab.id}
-              aria-controls={`tabpanel-${tab.id}`}
-              onClick={() => setActiveTab(tab.id)}
-              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
-                activeTab === tab.id
-                  ? "bg-brand text-white shadow-[0_6px_20px_-8px_rgba(47,109,99,0.7)]"
-                  : "bg-white/80 text-ink-soft hover:bg-white hover:text-ink"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+          {tabs.map((tab, index) => {
+            const isActive = activeTab === tab.id;
+
+            return (
+              <button
+                key={tab.id}
+                ref={(node) => {
+                  tabRefs.current[tab.id] = node;
+                }}
+                id={`tab-${tab.id}`}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`tabpanel-${tab.id}`}
+                // Roving tabindex: el tablist es una sola parada de tabulación
+                // y dentro se navega con las flechas.
+                tabIndex={isActive ? 0 : -1}
+                onClick={() => setActiveTab(tab.id)}
+                onKeyDown={(event) => handleTabKeyDown(event, index)}
+                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
+                  isActive
+                    ? "bg-brand text-white shadow-[0_6px_20px_-8px_rgba(47,109,99,0.7)]"
+                    : "bg-white/80 text-ink-soft hover:bg-white hover:text-ink"
+                }`}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
         </div>
 
         <div
           id={`tabpanel-${current.id}`}
           role="tabpanel"
-          aria-label={current.label}
-          className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3"
+          aria-labelledby={`tab-${current.id}`}
+          // El panel no contiene elementos enfocables, así que entra en el
+          // orden de tabulación para que se pueda leer con el teclado.
+          tabIndex={0}
+          className="mt-8 grid gap-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:grid-cols-2 xl:grid-cols-3"
         >
           {current.services.map((service) => (
             <Card

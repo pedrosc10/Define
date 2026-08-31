@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 import { SectionHeading } from "../ui";
 
@@ -41,30 +41,51 @@ const faqs = [
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
+  const id = useId();
+  const buttonId = `faq-pregunta-${id}`;
+  const panelId = `faq-respuesta-${id}`;
 
   return (
     <div className="rounded-[20px] border border-white/70 bg-white/90 shadow-[0_8px_30px_-20px_rgba(44,74,67,0.3)] backdrop-blur">
-      <button
-        type="button"
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-      >
-        <span className="text-base font-semibold text-ink">{question}</span>
-        <span
-          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tint text-brand transition-transform duration-300 ${open ? "rotate-45" : ""}`}
-          aria-hidden="true"
+      <h3>
+        <button
+          type="button"
+          id={buttonId}
+          aria-expanded={open}
+          aria-controls={panelId}
+          onClick={() => setOpen((v) => !v)}
+          className="flex w-full items-center justify-between gap-4 rounded-[20px] px-6 py-5 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
-          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
-            <path d="M8 3v10M3 8h10" />
-          </svg>
-        </span>
-      </button>
+          <span className="text-base font-semibold text-ink">{question}</span>
+          <span
+            className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tint text-brand transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+              <path d="M8 3v10M3 8h10" />
+            </svg>
+          </span>
+        </button>
+      </h3>
 
+      {/*
+       * Se anima grid-template-rows de 0fr a 1fr en lugar de max-height: la
+       * respuesta ocupa el alto que necesite, sin recortes en pantallas
+       * estrechas. `invisible` saca el texto del árbol de accesibilidad
+       * mientras está plegado, y su transición retrasa la ocultación hasta
+       * que termina el plegado.
+       */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        className={`grid transition-[grid-template-rows,visibility] duration-300 ease-in-out ${
+          open ? "visible grid-rows-[1fr]" : "invisible grid-rows-[0fr]"
+        }`}
       >
-        <p className="px-6 pb-5 text-sm leading-7 text-muted">{answer}</p>
+        <div className="overflow-hidden">
+          <p className="px-6 pb-5 text-sm leading-7 text-muted">{answer}</p>
+        </div>
       </div>
     </div>
   );
