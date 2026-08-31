@@ -180,3 +180,39 @@ Lo marco en verde porque es descripción objetiva de lo que ya está publicado, 
 6. **Ficha de Google Business Profile** de cada sede, enlazada desde la web y con las fotos de la galería. Para SEO local pesa tanto o más que la propia web.
 7. **Fotografía profesional** de las dos sedes vacías (sin menores), útil para OpenGraph, para la galería y para evitar por completo el asunto del consentimiento de imagen.
 8. **Blog / recursos para familias** (señales de alerta por edades, cómo pedir la beca NEAE…). Es el tipo de contenido que capta búsquedas informativas y alimenta el SEO local.
+
+---
+
+# Estado de la implementación (rama `mejora/auditoria-seo-ux`)
+
+15 commits atómicos, `npm run build` limpio después de cada bloque.
+
+## ✅ Aplicado
+
+| Commit | Bloque |
+|---|---|
+| `seo: desbloquea /_next/ en robots.txt y estabiliza el sitemap` | 1.1 |
+| `refactor: elimina componentes muertos y cierra la CSP` | 1.2 (+ AVIF de 4.1) |
+| `fix: restaura los landmarks de cabecera y pie de página` | 1.3 |
+| `fix: muestra la navegación también en tablet` | 1.4 |
+| `a11y: corrige contraste, foco visible y movimiento reducido` | 1.5 |
+| `a11y: completa los patrones de tabs, acordeón y menú móvil` | 1.6 |
+| `feat: rediseña la galería como carrusel controlado con visor` | 2.1 |
+| `feat: unifica los enlaces de contacto y mide los clics en los CTAs` | 2.2 + 4.2 |
+| `seo: completa el JSON-LD con horarios, servicios y FAQPage` | 3.6 |
+| `seo: ajusta title, description y encabezados de sección` | 3.1 + 3.2 + 3.3 |
+| `seo: imagen OpenGraph propia de 1200×630` | 3.7 |
+| `feat: página 404 propia en español` | 3.8 |
+| `refactor: mueve los colores sueltos a tokens del tema` | 2.3 |
+| `perf: recomprime los originales de la galería y corrige una foto girada` | 4.1 |
+| (los textos alternativos y el renombrado de fotos entran con el commit de la galería) | 3.4 + 3.5 |
+
+**ESLint:** de 1 error + 4 warnings a **0 errores + 3 warnings**, los tres en `GalleryCarousel.tsx`, el carrusel antiguo que se conserva sin usar hasta que se valide el nuevo.
+
+## ⏳ Pendiente de decisión
+
+1. **Borrar `app/components/GalleryCarousel.tsx`** una vez validado el carrusel nuevo. Es lo único que queda del anterior y no lo importa nadie.
+2. **`Psychotherapy.tsx` y `AdultSupport.tsx`**: contenido real del centro que no se publica en ninguna parte. Decidir si vuelve a la página o se archiva.
+3. **Variante del `title`**: se aplicó la opción A (`Centro DEFINE | Psicología y Logopedia · Arahal y Alcalá`). Abrevia «Alcalá de Guadaíra» por espacio; el nombre completo se conserva en OpenGraph, en el JSON-LD y en la página.
+4. **Consentimiento de imagen** de los menores y de los participantes adultos que aparecen en las fotos (§2.6 de la auditoría).
+5. Datos que no se inventan y siguen faltando en el JSON-LD: códigos postales, coordenadas, redes sociales y ficha de Google Business.
