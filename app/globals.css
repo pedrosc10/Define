@@ -29,44 +29,30 @@
   --color-accent: #7ea79c;
 }
 
-/* ─── Gallery carousel ────────────────────────────────────────────────────── */
+/* ─── Carrusel de la galería ──────────────────────────────────────────────── */
 
-@keyframes gallery-carousel {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+/* El desplazamiento es del usuario: gesto nativo en móvil, flechas y teclado en
+   escritorio. La barra de scroll se oculta porque ya hay indicador propio. */
+.carrusel-pista {
+  scrollbar-width: none;
 }
 
-.gallery-carousel-track {
+.carrusel-pista::-webkit-scrollbar {
+  display: none;
+}
+
+/* El <dialog> del visor ocupa toda la ventana y hace de fondo oscuro: la regla
+   ::backdrop la descarta el compilador de CSS, así que se pinta aquí. */
+.visor-foto[open] {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
   display: flex;
-  gap: 12px;
-  will-change: transform;
-  animation-name: gallery-carousel;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.gallery-carousel-track:hover {
-  animation-play-state: paused;
-}
-
-.gallery-carousel-img {
-  height: 280px;
-  width: auto;
-  display: block;
-  border-radius: 10px;
-  flex-shrink: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
-@media (max-width: 640px) {
-  .gallery-carousel-img { height: 200px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .gallery-carousel-track {
-    animation: none !important;
-  }
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(24, 50, 45, 0.94);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
