@@ -16,7 +16,8 @@ function actionFor(href: string) {
   if (href.startsWith("https://wa.me")) return "whatsapp";
   if (href.startsWith("tel:")) return "telefono";
   if (href.startsWith("mailto:")) return "email";
-  if (href.includes("maps.google")) return "mapa";
+  if (href.includes("maps.google") || href.includes("maps.app.goo.gl")) return "mapa";
+  if (href.includes("facebook.com") || href.includes("instagram.com")) return "red-social";
   return "enlace";
 }
 
