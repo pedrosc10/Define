@@ -122,7 +122,7 @@ export function ServiceTabs() {
   }
 
   return (
-    <section id="servicios" className="scroll-mt-28 bg-[#F7F5F0] py-20 sm:py-24">
+    <section id="servicios" className="scroll-mt-28 bg-surface-warm py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Especialidades"
@@ -180,7 +180,7 @@ export function ServiceTabs() {
                 <h3 className="text-xl font-semibold text-ink">{service.title}</h3>
                 <ServiceIcon icon={service.icon} />
               </div>
-              <div className="mt-5 h-px bg-[#e3ece8]" />
+              <div className="mt-5 h-px bg-divider" />
               <p className="mt-5 text-sm leading-7 text-muted">{service.description}</p>
             </Card>
           ))}

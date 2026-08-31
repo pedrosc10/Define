@@ -27,6 +27,10 @@
   --color-line: #d9e5e0;
   --color-line-strong: #c7d9d3;
   --color-accent: #7ea79c;
+  --color-surface-warm: #f7f5f0;
+  --color-divider: #e3ece8;
+  --color-control: #b5c8c1;
+  --color-control-hover: #90aca4;
 }
 
 /* ─── Carrusel de la galería ──────────────────────────────────────────────── */

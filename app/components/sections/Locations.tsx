@@ -69,7 +69,7 @@ export function Locations() {
                 href={loc.phoneHref}
                 origin="centros"
                 ariaLabel={`Llamar al centro DEFINE de ${loc.city}`}
-                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
+                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-control-hover hover:bg-tint/60"
               >
                 <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M1.33 2.33A1 1 0 0 1 2.25 1.33h1.42a1 1 0 0 1 1 .86l.3 1.92a1 1 0 0 1-.22.82l-.59.59a8 8 0 0 0 2.91 2.91l.59-.59a1 1 0 0 1 .82-.22l1.92.3a1 1 0 0 1 .86 1v1.42a1 1 0 0 1-1 1C4.33 11.33 1.33 8.33 1.33 4.33" />
@@ -80,7 +80,7 @@ export function Locations() {
                 href={loc.whatsappHref}
                 origin="centros"
                 ariaLabel={`WhatsApp del centro DEFINE de ${loc.city}`}
-                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
+                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-control-hover hover:bg-tint/60"
               >
                 WhatsApp
               </CtaLink>
@@ -88,7 +88,7 @@ export function Locations() {
                 href={loc.mapHref}
                 origin="centros"
                 ariaLabel={`Ver en Google Maps el centro DEFINE de ${loc.city}`}
-                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-[#f8fbfa]"
+                className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-4 py-2 text-sm font-semibold text-ink-soft transition hover:border-control-hover hover:bg-tint/60"
               >
                 Ver en Google Maps
               </CtaLink>

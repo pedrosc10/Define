@@ -45,7 +45,7 @@ export function SecondaryButton({ href, origin, children, className = "", ariaLa
       href={href}
       origin={origin}
       ariaLabel={ariaLabel}
-      className={`inline-flex min-h-12 items-center justify-center rounded-full border border-[#b5c8c1] bg-white/80 px-6 py-3 text-sm font-semibold text-ink-soft transition hover:border-[#90aca4] hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-full border border-control bg-white/80 px-6 py-3 text-sm font-semibold text-ink-soft transition hover:border-control-hover hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
     >
       {children}
     </CtaLink>

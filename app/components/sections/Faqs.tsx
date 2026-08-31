@@ -59,7 +59,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 export function Faqs() {
   return (
-    <section id="faq" className="scroll-mt-28 bg-[#F7F5F0] py-20 sm:py-24">
+    <section id="faq" className="scroll-mt-28 bg-surface-warm py-20 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Preguntas frecuentes"

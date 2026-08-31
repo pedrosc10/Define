@@ -44,7 +44,7 @@ export function Header() {
         </a>
 
         <div className="flex items-center gap-3">
-          <nav className="hidden items-center gap-6 text-sm font-medium text-[#506762] lg:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-muted-strong lg:flex">
             {navItems.map((item) => (
               <a key={item.href} className="transition hover:text-ink" href={item.href}>
                 {item.label}
