@@ -1,5 +1,5 @@
 import { faqs } from "./data/faqs";
-import { locations, openingDays, openingHours } from "./data/locations";
+import { locations, openingDays, openingHours, socialProfiles } from "./data/locations";
 import { tabs } from "./data/services";
 
 const SITE_URL = "https://www.centrodefine.com";
@@ -36,12 +36,19 @@ const departments = locations.map((location) => ({
   email: EMAIL,
   image: `${SITE_URL}/gallery/sala-de-espera-centro-define.jpg`,
   hasMap: location.mapHref,
+  sameAs: socialProfiles,
   address: {
     "@type": "PostalAddress",
     streetAddress: location.address,
+    postalCode: location.postalCode,
     addressLocality: location.city,
     addressRegion: "Sevilla",
     addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: location.geo.latitude,
+    longitude: location.geo.longitude,
   },
   areaServed: { "@type": "City", name: location.city },
   openingHoursSpecification,
@@ -73,6 +80,7 @@ export const structuredData = {
       image: `${SITE_URL}/logo.png`,
       description:
         "Centro de psicopedagogía, psicología, logopedia y neuropsicología en Arahal y Alcalá de Guadaíra. Evaluación, diagnóstico e intervención personalizada para niños, adolescentes, adultos y familias.",
+      sameAs: socialProfiles,
       areaServed: locations.map((location) => ({ "@type": "City", name: location.city })),
       openingHoursSpecification,
       availableService,
