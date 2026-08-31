@@ -1,5 +1,3 @@
-import { FallbackImage } from "./FallbackImage";
-
 export function Card({ className = "", children }: { className?: string; children: React.ReactNode }) {
   return (
     <div className={`rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-[0_18px_50px_-28px_rgba(44,74,67,0.35)] backdrop-blur ${className}`}>
@@ -39,35 +37,5 @@ export function SecondaryButton({ href, children, className = "", ariaLabel }: {
     >
       {children}
     </a>
-  );
-}
-
-export function ImageFrame({
-  src,
-  alt,
-  className = "",
-  overlayClassName = "",
-  fallbackSrc,
-  sizes,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  overlayClassName?: string;
-  fallbackSrc?: string;
-  sizes?: string;
-}) {
-  return (
-    <div className={`relative overflow-hidden rounded-[24px] ${className}`}>
-      <FallbackImage
-        src={src}
-        fallbackSrc={fallbackSrc}
-        alt={alt}
-        fill
-        sizes={sizes ?? "(min-width: 1024px) 50vw, 100vw"}
-        className="object-cover"
-      />
-      <div aria-hidden="true" className={`pointer-events-none absolute inset-0 ${overlayClassName}`} />
-    </div>
   );
 }
