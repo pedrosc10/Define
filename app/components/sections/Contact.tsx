@@ -1,4 +1,9 @@
+import { ContactForm } from "../ContactForm";
 import { SedeCta } from "../SedeCta";
+
+// Clave pública de Web3Forms. Mientras no esté configurada, el formulario no se
+// muestra y la sección funciona igual que antes, con WhatsApp y teléfono.
+const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
 export function Contact() {
   return (
@@ -27,6 +32,20 @@ export function Contact() {
             </div>
           </div>
         </div>
+
+        {web3formsKey ? (
+          <div className="mx-auto mt-8 max-w-2xl rounded-[32px] border border-line bg-white p-8 shadow-[0_18px_50px_-28px_rgba(44,74,67,0.3)] sm:p-10">
+            <h3 className="font-serif text-2xl tracking-tight text-ink">
+              ¿Prefieres que te escribamos nosotros?
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-muted">
+              Déjanos tus datos y te respondemos sin compromiso. Si no te apetece llamar o escribir
+              por WhatsApp en un primer contacto, este es tu sitio.
+            </p>
+
+            <ContactForm accessKey={web3formsKey} />
+          </div>
+        ) : null}
       </div>
     </section>
   );

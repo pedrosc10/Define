@@ -11,7 +11,7 @@ const cspHeader = `
   style-src 'self' 'unsafe-inline';
   font-src 'self' data:;
   img-src 'self' blob: data:;
-  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com;
+  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://api.web3forms.com;
   object-src 'none';
   base-uri 'self';
   form-action 'self';

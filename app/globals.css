@@ -31,6 +31,8 @@
   --color-divider: #e3ece8;
   --color-control: #b5c8c1;
   --color-control-hover: #90aca4;
+  /* Solo para mensajes de error: 6,69:1 sobre blanco. */
+  --color-danger: #a03a2e;
 }
 
 /* ─── Carrusel de la galería ──────────────────────────────────────────────── */
