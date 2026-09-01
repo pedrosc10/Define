@@ -108,6 +108,89 @@
   to   { transform: translateY(0);    opacity: 1; }
 }
 
+/* ─── Páginas legales ─────────────────────────────────────────────────────── */
+
+.texto-legal h2 {
+  font-family: var(--font-serif), serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  color: var(--color-ink);
+  margin-top: 2.75rem;
+}
+
+.texto-legal h2:first-child {
+  margin-top: 0;
+}
+
+.texto-legal p,
+.texto-legal li {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+}
+
+.texto-legal p {
+  margin-top: 1rem;
+}
+
+.texto-legal strong {
+  color: var(--color-ink-soft);
+  font-weight: 600;
+}
+
+.texto-legal ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.texto-legal li + li {
+  margin-top: 0.5rem;
+}
+
+.texto-legal a {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.texto-legal a:hover {
+  color: var(--color-brand-hover);
+}
+
+/* Ficha de datos identificativos: etiqueta y valor en dos columnas. */
+.texto-legal .datos-identificativos {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  border-top: 1px solid var(--color-divider);
+  padding-top: 1.25rem;
+}
+
+.texto-legal .datos-identificativos dt {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-eyebrow);
+}
+
+.texto-legal .datos-identificativos dd {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  .texto-legal .datos-identificativos {
+    grid-template-columns: 12rem 1fr;
+  }
+
+  .texto-legal .datos-identificativos dt {
+    padding-top: 0.15rem;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────────────────── */
 
 * {

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 type NavItem = { href: string; label: string };
@@ -63,14 +64,14 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
       >
         <nav aria-label="Navegación principal" className="mx-auto flex max-w-6xl flex-col px-4 py-3 sm:px-6">
           {items.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => setIsOpen(false)}
               className="rounded-2xl px-3 py-3 text-sm font-medium text-ink-soft transition hover:bg-white/80"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

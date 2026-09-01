@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { MobileMenu } from "./MobileMenu";
 import { SedeCta } from "./SedeCta";
 
 const navItems = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#como-trabajamos", label: "Cómo trabajamos" },
-  { href: "#faq", label: "Preguntas" },
-  { href: "#centros", label: "Centros" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#como-trabajamos", label: "Cómo trabajamos" },
+  { href: "/#faq", label: "Preguntas" },
+  { href: "/#centros", label: "Centros" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export function Header() {
@@ -30,7 +31,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#" className="flex items-center" aria-label="Inicio DEFINE">
+        <Link href="/" className="flex items-center" aria-label="Inicio DEFINE">
           <Image
             src="/logo.png"
             alt="DEFINE"
@@ -40,14 +41,14 @@ export function Header() {
             sizes="(min-width: 640px) 267px, 228px"
             className="h-12 w-auto object-contain sm:h-14"
           />
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3">
           <nav className="hidden items-center gap-6 text-sm font-medium text-muted-strong lg:flex">
             {navItems.map((item) => (
-              <a key={item.href} className="transition hover:text-ink" href={item.href}>
+              <Link key={item.href} className="transition hover:text-ink" href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

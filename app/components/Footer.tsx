@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { socialProfiles } from "../data/locations";
 import { CtaLink } from "./CtaLink";
@@ -38,7 +39,7 @@ export function Footer() {
     // pb-24 deja hueco para la StickyMobileBar fija; desaparece cuando la barra
     // deja de mostrarse.
     <footer className="border-t border-line bg-white/70 pb-24 lg:pb-0">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 xl:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-2 lg:px-8 xl:grid-cols-4">
         <div>
           <p className="font-serif text-2xl text-ink">DEFINE</p>
           <p className="mt-3 text-sm leading-7 text-muted">
@@ -81,6 +82,22 @@ export function Footer() {
             </CtaLink>
           </p>
         </div>
+        <div className="flex flex-col">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-eyebrow">Legal</p>
+          <ul className="mt-3 space-y-1 text-sm leading-7 text-muted">
+            <li>
+              <Link href="/aviso-legal" className="transition hover:text-brand">
+                Aviso legal
+              </Link>
+            </li>
+            <li>
+              <Link href="/politica-de-privacidad" className="transition hover:text-brand">
+                Política de privacidad
+              </Link>
+            </li>
+          </ul>
+        </div>
+
         <div className="flex flex-col">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-eyebrow">Centros inscritos</p>
           <div className="mt-3 grid grid-cols-[auto_1fr] items-center gap-4">
