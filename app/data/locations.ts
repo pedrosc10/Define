@@ -11,6 +11,8 @@ export type Location = {
   hours: string;
   /** Ficha de Google Business del centro. */
   mapHref: string;
+  /** Valoración media y número de reseñas en esa ficha de Google. */
+  rating: { value: number; count: number };
   nica: string;
 };
 
@@ -40,6 +42,7 @@ export const locations: Location[] = [
     whatsappHref: "https://wa.me/34622671219",
     hours: "Lunes a viernes · 9:00–13:00 h y 15:00–20:00 h",
     mapHref: "https://maps.app.goo.gl/UvChu8ZeKi2Ay6RP8",
+    rating: { value: 4.8, count: 6 },
     nica: "52308",
   },
   {
@@ -53,6 +56,7 @@ export const locations: Location[] = [
     whatsappHref: "https://wa.me/34722413378",
     hours: "Lunes a viernes · 9:00–13:00 h y 15:00–20:00 h",
     mapHref: "https://maps.app.goo.gl/oWRdetArHnVWEigw8",
+    rating: { value: 5.0, count: 5 },
     nica: "59133",
   },
 ];

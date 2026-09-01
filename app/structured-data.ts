@@ -51,6 +51,13 @@ const departments = locations.map((location) => ({
     longitude: location.geo.longitude,
   },
   areaServed: { "@type": "City", name: location.city },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: location.rating.value,
+    reviewCount: location.rating.count,
+    bestRating: 5,
+    worstRating: 1,
+  },
   openingHoursSpecification,
   availableService,
 }));

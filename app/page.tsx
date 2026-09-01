@@ -10,6 +10,7 @@ import { Process } from "./components/sections/Process";
 import { Quote } from "./components/sections/Quote";
 import { ServiceTabs } from "./components/sections/ServiceTabs";
 import { SocialProof } from "./components/sections/SocialProof";
+import { Testimonials } from "./components/sections/Testimonials";
 import { structuredData } from "./structured-data";
 
 export default function Home() {
@@ -44,13 +45,16 @@ export default function Home() {
         {/* 7 — Cita destacada (sección oscura de marca) */}
         <Quote />
 
-        {/* 8 — FAQ acordeón */}
+        {/* 8 — Testimonios de familias */}
+        <Testimonials />
+
+        {/* 9 — FAQ acordeón */}
         <Faqs />
 
-        {/* 9 — Nuestros centros */}
+        {/* 10 — Nuestros centros */}
         <Locations />
 
-        {/* 10 — CTA final */}
+        {/* 11 — CTA final */}
         <Contact />
       </main>
 

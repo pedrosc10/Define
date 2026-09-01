@@ -7,6 +7,7 @@ export type CtaOrigin =
   | "cabecera"
   | "hero"
   | "centros"
+  | "testimonios"
   | "contacto"
   | "barra-movil"
   | "pie"
