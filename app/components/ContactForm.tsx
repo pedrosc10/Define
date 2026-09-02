@@ -15,6 +15,14 @@ const campoClass =
 
 const etiquetaClass = "block text-sm font-semibold text-ink-soft";
 
+/**
+ * Los nombres de campo llegan corruptos al correo si llevan acentos
+ * ("Email o teléfono" se recibía como "Email o telÃ©fono"), así que este va sin
+ * tilde. Los valores sí viajan bien, de modo que el resto del mensaje se lee
+ * correctamente. La etiqueta visible en la web no cambia.
+ */
+const CAMPO_CONTACTO = "Contacto";
+
 export function ContactForm({ accessKey }: { accessKey: string }) {
   const [estado, setEstado] = useState<Estado>("inactivo");
   // El envío es por fetch, así que hasta que React no hidrata no hay nada que
@@ -44,7 +52,7 @@ export function ContactForm({ accessKey }: { accessKey: string }) {
 
     // Si el medio de contacto es un correo, se usa como Reply-To para poder
     // responder directamente desde el buzón.
-    const contacto = String(datos.get("Email o teléfono") ?? "");
+    const contacto = String(datos.get(CAMPO_CONTACTO) ?? "");
     if (contacto.includes("@")) datos.append("replyto", contacto);
 
     try {
@@ -103,7 +111,7 @@ export function ContactForm({ accessKey }: { accessKey: string }) {
         </label>
         <input
           id={idContacto}
-          name="Email o teléfono"
+          name={CAMPO_CONTACTO}
           type="text"
           required
           autoComplete="email"
