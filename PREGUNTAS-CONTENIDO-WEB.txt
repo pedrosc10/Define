@@ -185,7 +185,7 @@
   NIÑOS Y ADOLESCENTES
 ................................................................................
 
-  3.1  PSICOPEDAGOGÍA  [PRIORITARIO]
+  3.1   PSICOPEDAGOGÍA  [PRIORITARIO]
        (TDAH, dislexia, discalculia, comprensión lectora, adaptación escolar)
 
        (1)
@@ -196,7 +196,7 @@
        (6)
 
 
-  3.2  LOGOPEDIA  [PRIORITARIO]
+  3.2   LOGOPEDIA  [PRIORITARIO]
        (lenguaje, habla, comunicación, deglución, terapia miofuncional, SAAC)
 
        (1)
@@ -210,7 +210,7 @@
        nunca? ¿En qué casos se usa?
 
 
-  3.3  ATENCIÓN TEMPRANA  [PRIORITARIO]
+  3.3   ATENCIÓN TEMPRANA  [PRIORITARIO]
 
        (1)
        (2)
@@ -223,7 +223,7 @@
        importa tanto empezar pronto?
 
 
-  3.4  NEUROPSICOLOGÍA (niños y adolescentes)
+  3.4   NEUROPSICOLOGÍA (niños y adolescentes)
 
        (1)
        (2)
@@ -233,7 +233,7 @@
        (6)
 
 
-  3.5  TERAPIA OCUPACIONAL   ← SOLO EN ARAHAL
+  3.5   TERAPIA OCUPACIONAL   ← SOLO EN ARAHAL
 
        (1)
        (2)
@@ -245,7 +245,7 @@
        EXTRA: ¿qué es el procesamiento sensorial, explicado sencillo?
 
 
-  3.6  MUSICOTERAPIA
+  3.6   MUSICOTERAPIA
 
        (1)
        (2)
@@ -258,7 +258,7 @@
        típica.)
 
 
-  3.7  EVALUACIÓN Y DIAGNÓSTICO
+  3.7   EVALUACIÓN Y DIAGNÓSTICO
 
        (1)
        (2)
@@ -271,7 +271,7 @@
        hasta tener el informe en la mano?
 
 
-  3.8  PSICOLOGÍA INFANTOJUVENIL
+  3.8   PSICOLOGÍA INFANTOJUVENIL
 
        (1)
        (2)
@@ -285,7 +285,7 @@
   ADULTOS
 ................................................................................
 
-  3.9  PSICOTERAPIA
+  3.9   PSICOTERAPIA
        (cognitivo-conductual, EMDR, ACT, terapia narrativa, familiar…)
 
        (1)
@@ -300,7 +300,7 @@
        familiar, constelaciones…)
 
 
-  3.10 NEUROPSICOLOGÍA (adultos)
+  3.10  NEUROPSICOLOGÍA (adultos)
 
        (1)
        (2)
@@ -313,7 +313,7 @@
        envejecimiento? ¿Cuáles sí y cuáles no?
 
 
-  3.11 EVALUACIÓN PSICOLÓGICA (adultos)
+  3.11  EVALUACIÓN PSICOLÓGICA (adultos)
 
        (1)
        (2)
@@ -323,7 +323,7 @@
        (6)
 
 
-  3.12 DIVERSIDAD FUNCIONAL — PROGRAMA DE ADULTOS
+  3.12  DIVERSIDAD FUNCIONAL — PROGRAMA DE ADULTOS
 
        (1)
        (2)
@@ -348,7 +348,7 @@
   FAMILIA
 ................................................................................
 
-  3.13 ORIENTACIÓN FAMILIAR
+  3.13  ORIENTACIÓN FAMILIAR
 
        (1)
        (2)
@@ -358,7 +358,7 @@
        (6)
 
 
-  3.14 TERAPIA FAMILIAR
+  3.14  TERAPIA FAMILIAR
 
        (1)
        (2)
@@ -371,7 +371,7 @@
        suenan igual y conviene distinguirlas.
 
 
-  3.15 GESTIÓN DE BECAS NEAE  [PRIORITARIO]
+  3.15  GESTIÓN DE BECAS NEAE  [PRIORITARIO]
 
        (1)
        (2)

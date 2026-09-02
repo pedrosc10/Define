@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# El .docx del cuestionario se genera desde el .txt:
+#   python tools/generar-cuestionario-docx.py
+PREGUNTAS-CONTENIDO-WEB.docx
