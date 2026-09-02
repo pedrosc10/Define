@@ -2,7 +2,7 @@
 
 import { track } from "@vercel/analytics";
 import Link from "next/link";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 import { locations } from "../data/locations";
 
@@ -17,8 +17,14 @@ const etiquetaClass = "block text-sm font-semibold text-ink-soft";
 
 export function ContactForm({ accessKey }: { accessKey: string }) {
   const [estado, setEstado] = useState<Estado>("inactivo");
+  // El envío es por fetch, así que hasta que React no hidrata no hay nada que
+  // enviar: se mantiene el botón deshabilitado para no permitir un envío nativo
+  // que se perdería.
+  const [listo, setListo] = useState(false);
   const avisoRef = useRef<HTMLParagraphElement>(null);
   const id = useId();
+
+  useEffect(() => setListo(true), []);
 
   const idNombre = `nombre-${id}`;
   const idContacto = `contacto-${id}`;
@@ -58,7 +64,14 @@ export function ContactForm({ accessKey }: { accessKey: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-6 grid gap-5">
+    <form
+      onSubmit={handleSubmit}
+      // method="post" es la red de seguridad: si por lo que sea el navegador
+      // llegara a hacer un envío nativo, los datos no acabarían en la barra de
+      // direcciones (y de ahí al historial y a los registros del servidor).
+      method="post"
+      className="mt-6 grid gap-5"
+    >
       {/* Señuelo antispam: invisible para las personas, tentador para los bots. */}
       <input
         type="checkbox"
@@ -157,7 +170,7 @@ export function ContactForm({ accessKey }: { accessKey: string }) {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <button
           type="submit"
-          disabled={estado === "enviando"}
+          disabled={estado === "enviando" || !listo}
           className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(47,109,99,0.8)] transition hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:cursor-not-allowed disabled:opacity-60"
         >
           {estado === "enviando" ? "Enviando…" : "Enviar mensaje"}
