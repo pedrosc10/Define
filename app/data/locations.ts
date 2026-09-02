@@ -1,5 +1,7 @@
+export type LocationId = "arahal" | "alcala-de-guadaira";
+
 export type Location = {
-  id: string;
+  id: LocationId;
   city: string;
   address: string;
   postalCode: string;
@@ -29,6 +31,11 @@ export const socialProfiles = [
   "https://www.facebook.com/centrodefine/?locale=es_ES",
   "https://www.instagram.com/definecentro/?hl=es",
 ];
+
+/** Nombre de la ciudad a partir del identificador de sede. */
+export function cityOf(id: LocationId): string {
+  return locations.find((location) => location.id === id)?.city ?? "";
+}
 
 export const locations: Location[] = [
   {

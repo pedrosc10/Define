@@ -1,6 +1,6 @@
 import { faqs } from "./data/faqs";
 import { locations, openingDays, openingHours, socialProfiles } from "./data/locations";
-import { tabs } from "./data/services";
+import { isAvailableAt, tabs } from "./data/services";
 
 const SITE_URL = "https://www.centrodefine.com";
 const ORGANIZATION_ID = `${SITE_URL}/#organizacion`;
@@ -17,14 +17,19 @@ const openingHoursSpecification = openingHours.map((range) => ({
 }));
 
 // Un servicio por cada especialidad publicada en la sección de servicios.
-const availableService = tabs.flatMap((tab) =>
+const allServices = tabs.flatMap((tab) =>
   tab.services.map((service) => ({
-    "@type": "MedicalTherapy",
-    name: service.title,
-    description: service.description,
-    audience: { "@type": "Audience", audienceType: tab.label },
+    item: service,
+    schema: {
+      "@type": "MedicalTherapy",
+      name: service.title,
+      description: service.description,
+      audience: { "@type": "Audience", audienceType: tab.label },
+    },
   })),
 );
+
+const availableService = allServices.map((entry) => entry.schema);
 
 const departments = locations.map((location) => ({
   "@type": "MedicalBusiness",
@@ -51,6 +56,10 @@ const departments = locations.map((location) => ({
     longitude: location.geo.longitude,
   },
   areaServed: { "@type": "City", name: location.city },
+  // No todas las sedes prestan todos los servicios.
+  availableService: allServices
+    .filter((entry) => isAvailableAt(entry.item, location.id))
+    .map((entry) => entry.schema),
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: location.rating.value,
@@ -59,7 +68,6 @@ const departments = locations.map((location) => ({
     worstRating: 1,
   },
   openingHoursSpecification,
-  availableService,
 }));
 
 const faqPage = {

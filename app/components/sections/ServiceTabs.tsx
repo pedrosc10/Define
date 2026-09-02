@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-import { type IconKey, tabs } from "../../data/services";
+import { availabilityNote, type IconKey, tabs } from "../../data/services";
 import { Card, SectionHeading } from "../ui";
 
 const strokeProps = {
@@ -171,19 +171,35 @@ export function ServiceTabs() {
           tabIndex={0}
           className="mt-8 grid gap-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand sm:grid-cols-2 xl:grid-cols-3"
         >
-          {current.services.map((service) => (
-            <Card
-              key={service.title}
-              className="flex h-full flex-col bg-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_56px_-28px_rgba(44,74,67,0.4)]"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-semibold text-ink">{service.title}</h3>
-                <ServiceIcon icon={service.icon} />
-              </div>
-              <div className="mt-5 h-px bg-divider" />
-              <p className="mt-5 text-sm leading-7 text-muted">{service.description}</p>
-            </Card>
-          ))}
+          {current.services.map((service) => {
+            const aviso = availabilityNote(service);
+
+            return (
+              <Card
+                key={service.title}
+                className="flex h-full flex-col bg-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_56px_-28px_rgba(44,74,67,0.4)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-xl font-semibold text-ink">{service.title}</h3>
+                  <ServiceIcon icon={service.icon} />
+                </div>
+
+                {/* Aviso de disponibilidad: va antes de la descripción para que
+                    se lea antes de decidir, no como nota al pie. */}
+                {aviso ? (
+                  <p className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-tint px-3 py-1 text-xs font-semibold text-brand">
+                    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0" fill="currentColor" aria-hidden="true">
+                      <path d="M8 1.5c-2.2 0-4 1.8-4 4 0 3.4 4 9 4 9s4-5.6 4-9c0-2.2-1.8-4-4-4Zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" />
+                    </svg>
+                    {aviso}
+                  </p>
+                ) : null}
+
+                <div className="mt-5 h-px bg-divider" />
+                <p className="mt-5 text-sm leading-7 text-muted">{service.description}</p>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

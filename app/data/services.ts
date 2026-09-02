@@ -1,4 +1,12 @@
-export type ServiceItem = { title: string; description: string; icon: IconKey };
+import { cityOf, type LocationId } from "./locations";
+
+export type ServiceItem = {
+  title: string;
+  description: string;
+  icon: IconKey;
+  /** Sedes donde se presta. Si se omite, se ofrece en todas. */
+  availableAt?: LocationId[];
+};
 export type Tab = { id: string; label: string; services: ServiceItem[] };
 export type IconKey =
   | "book"
@@ -44,6 +52,7 @@ export const tabs: Tab[] = [
         title: "Terapia ocupacional",
         description: "Autonomía y participación en actividades de la vida diaria. Intervención en procesamiento sensorial y motricidad.",
         icon: "hand",
+        availableAt: ["arahal"],
       },
       {
         title: "Musicoterapia",
@@ -110,3 +119,17 @@ export const tabs: Tab[] = [
     ],
   },
 ];
+
+/** ¿Se presta este servicio en esa sede? Sin `availableAt`, en todas. */
+export function isAvailableAt(service: ServiceItem, locationId: LocationId): boolean {
+  return !service.availableAt || service.availableAt.includes(locationId);
+}
+
+/**
+ * Aviso corto para los servicios que no están en todas las sedes
+ * ("Solo en Arahal"); null cuando se presta en todas.
+ */
+export function availabilityNote(service: ServiceItem): string | null {
+  if (!service.availableAt || service.availableAt.length !== 1) return null;
+  return `Solo en ${cityOf(service.availableAt[0])}`;
+}
