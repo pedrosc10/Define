@@ -1,0 +1,446 @@
+===============================================================================
+  CENTRO DEFINE — INFORMACIÓN PARA LAS NUEVAS PÁGINAS DE LA WEB
+===============================================================================
+
+  Para: el equipo del centro
+  Objeto: reunir la información necesaria para crear una página por cada
+          servicio y una página por cada sede.
+
+
+-------------------------------------------------------------------------------
+  ANTES DE EMPEZAR: LEED ESTO, SON DOS MINUTOS
+-------------------------------------------------------------------------------
+
+  CÓMO RESPONDER
+  Con frases sueltas, guiones o notas rápidas. NO hace falta redactar bonito
+  ni escribir párrafos: de eso me encargo yo después. Lo que necesito es la
+  información correcta, no el estilo.
+
+  QUÉ NO PUEDO INVENTARME
+  Todo lo que aparezca en la web sobre vuestro trabajo tiene que salir de
+  vosotros. No voy a escribir ni una edad, ni una duración, ni una señal de
+  alerta que no me hayáis dicho. Si un apartado se queda en blanco, esa parte
+  simplemente no se publica: es preferible una página más corta y cierta que
+  una más larga e inventada.
+
+  SI ALGO NO LO SABÉIS O NO APLICA
+  Escribid "no aplica" o "no lo sabemos" y seguid. Es una respuesta perfectamente
+  válida y me ahorra tener que preguntar otra vez.
+
+  CUÁNTO OCUPA ESTO
+  La PARTE 1 y la PARTE 2 se responden una sola vez y son las más rápidas.
+  La PARTE 3 es la larga: hay 15 servicios, pero NO hace falta responderlos
+  todos de golpe. Están marcados con [PRIORITARIO] los cuatro por los que
+  empezaríamos; con esos cuatro ya se pueden publicar las primeras páginas.
+
+  IMPORTANTE
+  Todo lo que se publique sobre salud debe estar revisado por la profesional
+  correspondiente de cada área. Que responda quien lleva cada especialidad.
+
+
+===============================================================================
+  PARTE 1 — PREGUNTAS GENERALES (se responden una sola vez)
+===============================================================================
+
+1.1  ¿A partir de qué edad y hasta qué edad atendéis? ¿Hay algún límite?
+
+
+1.2  Además de Arahal y Alcalá de Guadaíra, ¿de qué pueblos os viene gente
+     habitualmente? (Sirve para que la web aparezca en esas búsquedas.)
+
+
+1.3  ¿Se puede hacer alguna intervención online o son todas presenciales?
+     Si hay algo online, ¿qué exactamente?
+
+
+1.4  ¿Cuánto se suele tardar en conseguir la primera cita? Un rango sincero
+     ("entre una y tres semanas") vale.
+
+
+1.5  ¿Cómo es exactamente la primera cita de valoración?
+     - ¿Cuánto dura?
+     - ¿Quién asiste? (¿el niño solo, los padres, ambos?)
+     - ¿Se hace alguna prueba ese día o solo entrevista?
+     - ¿Tiene coste? ¿Se dice en la web?
+
+
+1.6  ¿Los precios se publican en la web o preferís darlos por teléfono?
+     Si se publican, hace falta la lista.
+
+
+1.7  ¿Cómo es la coordinación con los colegios? ¿Vais al centro educativo,
+     habláis con los orientadores, hacéis informes para el colegio?
+
+
+1.8  ¿Hacéis informes por escrito? ¿Se entregan siempre? ¿Tienen coste aparte?
+
+
+1.9  ¿Trabajáis con alguna asociación, ayuntamiento, mutua o convenio que
+     convenga mencionar?
+
+
+1.10 ¿Hay algo que os diferencie de otros centros de la zona y que hoy no
+     esté dicho en la web?
+
+
+===============================================================================
+  PARTE 2 — LAS DOS SEDES
+===============================================================================
+
+  Esto es para crear una página propia de cada centro. Los datos que ya
+  tenemos (dirección, teléfono, horario y NICA) NO hace falta repetirlos.
+
+................................................................................
+  2.A  SEDE DE ARAHAL — C/ Alondra, 38 - Local B
+................................................................................
+
+2.A.1  ¿Cómo se llega? Referencias útiles: cerca de qué está, en qué barrio,
+       qué hay enfrente.
+
+
+2.A.2  ¿Hay dónde aparcar? ¿Es fácil o complicado?
+
+
+2.A.3  ¿Llega algún autobús o transporte público cerca?
+
+
+2.A.4  Accesibilidad: ¿hay escalones para entrar? ¿ascensor? ¿baño adaptado?
+       ¿puede entrar una silla de ruedas sin problema?
+
+
+2.A.5  ¿Cuántas salas tiene y para qué se usa cada una?
+
+
+2.A.6  ¿Qué profesionales trabajan en esta sede y de qué se encarga cada una?
+       (Ver también la PARTE 4 sobre nombres.)
+
+
+2.A.7  ¿Hay algo característico de este centro? (la sala sensorial, la sala de
+       musicoterapia, el taller ocupacional…)
+
+
+................................................................................
+  2.B  SEDE DE ALCALÁ DE GUADAÍRA — C/ Bailén, 46
+................................................................................
+
+2.B.1  ¿Cómo se llega? Referencias útiles: cerca de qué está, en qué barrio,
+       qué hay enfrente.
+
+
+2.B.2  ¿Hay dónde aparcar? ¿Es fácil o complicado?
+
+
+2.B.3  ¿Llega algún autobús o transporte público cerca?
+
+
+2.B.4  Accesibilidad: ¿hay escalones para entrar? ¿ascensor? ¿baño adaptado?
+       ¿puede entrar una silla de ruedas sin problema?
+
+
+2.B.5  ¿Cuántas salas tiene y para qué se usa cada una?
+
+
+2.B.6  ¿Qué profesionales trabajan en esta sede y de qué se encarga cada una?
+
+
+2.B.7  ¿Hay algo característico de este centro?
+
+
+2.B.8  CONFIRMACIÓN: tenemos anotado que en Alcalá se ofrece todo MENOS
+       terapia ocupacional. ¿Es correcto? ¿Hay alguna otra diferencia entre
+       los dos centros que se nos haya pasado?
+
+
+===============================================================================
+  PARTE 3 — LOS SERVICIOS
+===============================================================================
+
+  Un bloque por servicio. Las mismas seis preguntas en todos, así que en
+  cuanto respondáis el primero los demás van rodados.
+
+  LAS SEIS PREGUNTAS SON SIEMPRE ESTAS:
+
+    (1) ¿A quién va dirigido? Edades y perfil.
+
+    (2) SEÑALES DE ALERTA: ¿qué cosas nota una familia en casa o un profesor
+        en clase que deberían hacer que os llamen? Cuantas más concretas y
+        cuantas más, mejor. Si podéis separarlas por edades, ideal.
+        >>> ESTA ES LA PREGUNTA MÁS IMPORTANTE DE TODO EL DOCUMENTO. Es lo
+            que busca en Google un padre preocupado a las once de la noche,
+            y es lo que hará que os encuentren.
+
+    (3) ¿Cómo es una sesión? Duración, cada cuánto, quién entra, qué material
+        o método se usa.
+
+    (4) ¿Cuánto suele durar la intervención completa? Un rango vale.
+
+    (5) ¿Qué 3 o 4 preguntas os hacen SIEMPRE las familias sobre esto? Y su
+        respuesta.
+
+    (6) ¿Algo que la gente crea erróneamente sobre este servicio y convenga
+        aclarar?
+
+
+................................................................................
+  NIÑOS Y ADOLESCENTES
+................................................................................
+
+  3.1  PSICOPEDAGOGÍA  [PRIORITARIO]
+       (TDAH, dislexia, discalculia, comprensión lectora, adaptación escolar)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+
+  3.2  LOGOPEDIA  [PRIORITARIO]
+       (lenguaje, habla, comunicación, deglución, terapia miofuncional, SAAC)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿qué es un SAAC, explicado para una familia que no lo ha oído
+       nunca? ¿En qué casos se usa?
+
+
+  3.3  ATENCIÓN TEMPRANA  [PRIORITARIO]
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿hasta qué edad se considera atención temprana? ¿Por qué
+       importa tanto empezar pronto?
+
+
+  3.4  NEUROPSICOLOGÍA (niños y adolescentes)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+
+  3.5  TERAPIA OCUPACIONAL   ← SOLO EN ARAHAL
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿qué es el procesamiento sensorial, explicado sencillo?
+
+
+  3.6  MUSICOTERAPIA
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿hace falta que el niño sepa música o le guste? (Es la duda
+       típica.)
+
+
+  3.7  EVALUACIÓN Y DIAGNÓSTICO
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿qué pruebas se usan y cuánto se tarda desde la primera cita
+       hasta tener el informe en la mano?
+
+
+  3.8  PSICOLOGÍA INFANTOJUVENIL
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+
+................................................................................
+  ADULTOS
+................................................................................
+
+  3.9  PSICOTERAPIA
+       (cognitivo-conductual, EMDR, ACT, terapia narrativa, familiar…)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿podéis explicar en dos líneas cada enfoque que ofrecéis y
+       cuándo se usa uno u otro? (cognitivo-conductual, EMDR, ACT, narrativa,
+       familiar, constelaciones…)
+
+
+  3.10 NEUROPSICOLOGÍA (adultos)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿trabajáis daño cerebral adquirido, ictus, deterioro cognitivo,
+       envejecimiento? ¿Cuáles sí y cuáles no?
+
+
+  3.11 EVALUACIÓN PSICOLÓGICA (adultos)
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+
+  3.12 DIVERSIDAD FUNCIONAL — PROGRAMA DE ADULTOS
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA, y es importante porque hoy en la web esto está muy resumido:
+       - ¿Qué horario tiene el programa? ¿Es de mañana? ¿Todos los días?
+       - ¿Qué se hace exactamente en un día normal?
+       - Tenemos anotadas estas áreas de un texto antiguo: autogestión y
+         autodeterminación, bienestar emocional, taller ocupacional,
+         accesibilidad cognitiva, inclusión social, estimulación cognitiva,
+         sensibilización y habilidades de la vida diaria.
+         ¿Sigue siendo así? ¿Explicáis brevemente cada una?
+       - ¿Hay actividades fuera del centro? (Tenemos una foto en la piscina.)
+       - ¿Cómo se accede al programa? ¿Hay plazas limitadas?
+
+
+................................................................................
+  FAMILIA
+................................................................................
+
+  3.13 ORIENTACIÓN FAMILIAR
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+
+  3.14 TERAPIA FAMILIAR
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA: ¿en qué se diferencia de la orientación familiar? Desde fuera
+       suenan igual y conviene distinguirlas.
+
+
+  3.15 GESTIÓN DE BECAS NEAE  [PRIORITARIO]
+
+       (1)
+       (2)
+       (3)
+       (4)
+       (5)
+       (6)
+
+       EXTRA, y aquí hay una oportunidad grande porque casi nadie lo explica
+       bien en internet:
+       - ¿Qué es exactamente la beca NEAE, en cristiano?
+       - ¿Quién puede pedirla? ¿Qué requisitos hay?
+       - ¿Cuándo se abre el plazo cada año?
+       - ¿Qué papeles hacen falta?
+       - ¿Qué hacéis vosotros exactamente y qué tiene que hacer la familia?
+       - ¿Tiene algún coste vuestra gestión?
+       - ¿Cuánto dinero suele cubrir? (Si es público, se puede decir.)
+
+
+===============================================================================
+  PARTE 4 — EQUIPO Y FOTOS
+===============================================================================
+
+4.1  EQUIPO. Google valora que se vea quién hay detrás, sobre todo en salud.
+     Para cada profesional, si estáis de acuerdo en publicarlo:
+     - Nombre (o solo el nombre de pila, si preferís)
+     - Titulación
+     - Número de colegiada, si tiene
+     - Especialidad y sede donde trabaja
+     - Formación específica destacable
+
+     ¿Queréis que aparezcan nombres y fotos, solo nombres, o nada de esto?
+
+
+4.2  FOTOS. Tenemos 21 fotos en la web, pero no sabemos de qué sede es cada
+     una y hacen falta para las páginas de cada centro.
+     ¿Podéis decirme cuáles son de Arahal y cuáles de Alcalá?
+     (Puedo pasaros la lista con los nombres de archivo si os ayuda.)
+
+
+4.3  ¿Hay fotos nuevas? Vendrían muy bien fotos de las salas VACÍAS, sin
+     nadie: sirven para todo y evitan cualquier problema de imagen.
+
+
+===============================================================================
+  PARTE 5 — DOS COSAS PENDIENTES DE ANTES
+===============================================================================
+
+5.1  DELEGADO DE PROTECCIÓN DE DATOS: ¿el centro tiene uno designado?
+     Si lo hay, hace falta el nombre o el correo de contacto para ponerlo en
+     la política de privacidad.
+
+
+5.2  CONTRATOS DE ENCARGADO DE TRATAMIENTO: la política de privacidad
+     menciona a Vercel (el alojamiento de la web) y a Web3Forms (el
+     formulario de contacto). El reglamento pide tener firmado un contrato
+     con cada uno. ¿Lo ha revisado ya vuestro asesor?
+
+
+===============================================================================
+  ORDEN SUGERIDO, POR SI SE HACE CUESTA ARRIBA
+===============================================================================
+
+  1º  PARTE 1 completa                            (rápido, media hora)
+  2º  PARTE 2, las dos sedes                      (rápido, y desbloquea 2 páginas)
+  3º  Los cuatro [PRIORITARIO] de la PARTE 3      (lo que más rinde)
+  4º  PARTE 4                                     (decisión vuestra)
+  5º  El resto de servicios, sin prisa            (uno o dos por semana)
+
+  Con los pasos 1, 2 y 3 ya se pueden publicar seis páginas nuevas.
+
+===============================================================================
