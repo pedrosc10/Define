@@ -1,6 +1,8 @@
 const stats = [
   { value: "+500", label: "familias acompañadas" },
-  { value: "5.0 ★", label: "valoración en Google" },
+  // Media ponderada de las dos fichas de Google: 4,8 con 6 reseñas en Arahal y
+  // 5,0 con 5 en Alcalá de Guadaíra.
+  { value: "4.9 ★", label: "en Google" },
   { value: "10+", label: "especialistas" },
   { value: "+8 años", label: "de experiencia" },
 ];
